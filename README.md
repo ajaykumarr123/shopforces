@@ -7,8 +7,8 @@ git clone https://github.com/ajaykumarr123/shop_management
 
 ##### Admin(Shop Owner) </br>
 ```
-username:ajay
-password:ajay
+username: ajay
+password: ajay
 ```
 
 * To create new admin(shop owner)</br>
