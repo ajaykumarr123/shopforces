@@ -11,4 +11,6 @@ username:ajay
 password:ajay
 ```
 </br>
+* to create new admin</br>
+  ```python3 manage.py runserver```
 Now follow Instructions given at the end of [guide.pdf](https://github.com/ajaykumarr123/shop_management/blob/master/guide.pdf)
