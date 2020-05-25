@@ -1,6 +1,6 @@
 # shop_management
 #### Download shop_management.zip file or clone repo.
-#### Unzip it and enjoy
+#### shop_management.zip
 
 Admin(Shop Owner)</br>
 username:ajay</br>
