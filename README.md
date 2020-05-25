@@ -6,4 +6,4 @@
 username:ajay</br>
 password:ajay
 
-Now follow steps given at last of *guide.pdf*
+Now follow Instructions given at last of *guide.pdf*
