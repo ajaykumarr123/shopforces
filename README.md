@@ -1,2 +1,2 @@
 # shop_management
-### down load shop_management.zip file
+### Download shop_management.zip file and unzip it
