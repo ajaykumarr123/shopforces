@@ -7,7 +7,8 @@ git clone https://github.com/ajaykumarr123/shop_management
 
 ##### Admin(Shop Owner) </br>
 ```
-username:ajay</br>
+username:ajay
 password:ajay
 ```
+</br>
 Now follow Instructions given at the end of [guide.pdf](https://github.com/ajaykumarr123/shop_management/blob/master/guide.pdf)
