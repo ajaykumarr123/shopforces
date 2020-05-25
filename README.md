@@ -11,7 +11,7 @@ username:ajay
 password:ajay
 ```
 
-* to create new admin(shop owner)</br>
+* To create new admin(shop owner)</br>
   ```
   python3 manage.py createsuperuser
   ```
