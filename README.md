@@ -1,8 +1,8 @@
 # shop_management
-#### Download shop_management.zip file or clone repo.
-#### shop_management.zip
+#### Step1: Download shop_management.zip file or clone repo.
+#### Step2: shop_management.zip
 
-Admin(Shop Owner)</br>
+##### Admin(Shop Owner)</br>
 username:ajay</br>
 password:ajay
 
