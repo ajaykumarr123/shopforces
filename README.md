@@ -1,5 +1,5 @@
 # Shop Management System
-##### Step1: Download shop_management.zip file  or       Clone repo.
+##### Step1: Download shop_management.zip file  or Clone repo.
 ```
 git clone https://github.com/ajaykumarr123/shop_management 
 ```
