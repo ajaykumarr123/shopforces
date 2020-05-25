@@ -1,14 +1,9 @@
 # shop_management
 #### Step1: Download shop_management.zip file or clone repo.
-#### Step2: shop_management.zip
+#### Step2: unzip shop_management.zip
 
 ##### Admin(Shop Owner)</br>
 username:ajay</br>
 password:ajay
 
-* To create new admin(shop Owner)</br>
-```python3 manage.py createsuperuser```
-
-Now runserver </br>
-```python3 manage.py runserver```
-
+Now follow steps given at last of *guide.pdf*
