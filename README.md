@@ -13,6 +13,6 @@ password:ajay
 
 * to create new admin(shop owner)</br>
   ```
-  python3 manage.py runserver
+  python3 manage.py createsuperuser
   ```
 Now follow Instructions given at the end of [guide.pdf](https://github.com/ajaykumarr123/shop_management/blob/master/guide.pdf)
