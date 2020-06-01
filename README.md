@@ -32,7 +32,7 @@ python3 -m venv new_v
 
 3. Activate the virtual environment
 
-```bash
+```
 source new_v/bin/activate
 ```
 4.Install django and django-crispy-forms
