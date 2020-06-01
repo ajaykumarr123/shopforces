@@ -43,7 +43,7 @@ pip3 install celery==4.4.2 django-crispy-forms image django-rest-framework
 ```
 5. Execute the following command to run the server:
 ```bash
-python manage.py runserver
+python3 manage.py runserver
 ```
 5. Open the following address in your browser
 ```bash
