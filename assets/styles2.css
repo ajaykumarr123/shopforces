@@ -1,0 +1,74 @@
+
+
+body *{
+    font-family: Ubuntu;
+    color: #0d0c0c;
+    font-weight: normal;
+    font-size: 17;
+}
+
+
+.section h1
+{
+  margin-left:4.5em;
+}
+nav li{
+    display: inline-block;
+    list-style-type: none;
+    margin-top: 10px;
+}
+.site-form{
+  margin-top:60px ;
+  border: 1px solid #00dba0;
+  padding: 20px;
+}
+
+.site-form input, .site-form textarea{
+  display : block;
+  margin: 20px 0 0 0;
+  padding: 10px;
+}
+.site-form input[type="submit"]{
+    background: #00dba0;
+    border: 0;
+    color: #fff;
+    font-size: 20px;
+    border-radius: 4px;
+    margin: 10px 0;
+}
+
+.helptext, .helptext ul{
+    margin: 0 auto 20px;
+    color: #bbb;
+    font-size: 0.9em;
+    display: block;
+}
+
+.errorlist li{
+    padding: 10px;
+    list-style-type: none;
+    border: 1px solid #FF5722;
+    margin: 10px 0;
+    color: #FF5722
+}
+
+.errorlist{
+    padding: 0;
+}
+
+.form-control-label
+{
+  font-size:20;
+  color:black;
+
+}
+
+.text-muted,.text-muted li
+{
+  font-size:13;
+  color:grey
+}
+.form-group
+{
+  margin-bottom:20
+}

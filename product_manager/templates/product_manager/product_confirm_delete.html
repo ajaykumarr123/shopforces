@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+{% if user.is_authenticated and user.is_superuser%}
+
+	<form method="post">{% csrf_token %}
+	    <p>Are you sure you want to delete "{{ object }}"?</p>
+	    <input class="btn btn-primary" type="submit" value="Confirm">
+	</form>
+
+	<button class="btn btn-outline-success my-2 my-sm-0"><a  href="{{ object.get_absolute_url }}">Cancel</a></button>
+
+	{% else %}
+	<div class="container">
+		<p>You need admin access</p>
+		<button class="btn btn-outline-success my-2 my-sm-0"><a href="{% url 'store' %}">store</a></button>
+	</div>
+	{% endif %}
+
+{% endblock %}

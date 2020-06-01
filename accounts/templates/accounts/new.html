@@ -1,0 +1,31 @@
+<html>
+    <head>
+        {% csrf_token %}
+        <title>login</title>
+        <script src="https://code.jquery.com/jquery-3.5.0.min.js" integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
+        
+       <script type="text/javascript">
+            function s(){
+                var data={}
+                data['username']=document.getElementById("username").value
+                data['password1']=document.getElementById("password1").value
+                data['password2']=document.getElementById("password2").value
+
+                $.post("/accounts/user-check", data, function(result){
+                $("span").html(result);
+                });
+                console.log(data)
+            }
+        </script>
+    </head>
+    <body>
+        <div>
+            <input type="text" id="username">
+            <input type="text" id="password1">
+            <input type="text" id="password2">
+            <button onclick="s()">
+                Submit
+            </button>
+        </div>
+    </body>
+</html>

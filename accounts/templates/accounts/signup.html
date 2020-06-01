@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{%block content%}
+<h1 style="margin-top:70px">Sign Up for:</h1>
+    <div class="choices" style="margin-left:30px">
+        <div class="choice-1">
+            <button class="btn btn-outline-success my-2 my-sm-0"><a href="{% url 'accounts:signup_employee'%}">Employee</a></button>
+        </div>
+        <div class="choice-2">
+          <button class="btn btn-outline-success my-2 my-sm-0">  <a href="{% url 'accounts:signup_customer'%}" >Customer</a></button>
+        </div>
+    </div>
+
+{%endblock content%}

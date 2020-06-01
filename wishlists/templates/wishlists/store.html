@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+	<div class="row">
+		{% for product in products %}
+		<div class="col-lg-4">
+			<img class="thumbnail" src="{{product.imageURL}}">
+			<div class="box-element product">
+
+
+      {% if not user.is_authenticated %}
+			      <h4 style="display: inline-block; float: left"><strong>{{product.name}}</strong></h4>
+						<h5 style="display: inline-block; float: right"><strong>₹{{product.price}}</strong></h5>
+						<h4 style="display: inline-block;"><strong></strong></h4>
+			{% else %}
+				<h4><strong>{{product.name}}</strong></h4>
+					<hr>
+				{% if user.is_superuser %}
+				     <a class="btn btn-outline-success" href={{product.get_absolute_url}}>View</a>
+				{% elif user.profile.type == 'D' %}
+				<form action="{% url "cart:cart_new" product.id %}" method="post">
+                    {% csrf_token %}
+                    <input type="submit" value="add to cart" class="btn btn-outline-secondary add-btn update-cart">
+										<h4 style="display: inline-block; float: right"><strong>₹{{product.price}}</strong></h4>
+        </form>
+				{% else %}
+					<button data-product="{{product.id}}" data-action="add" class="btn btn-outline-secondary add-btn update-cart">Add to Wishlist</button>
+							<h4 style="display: inline-block; float: right"><strong>₹{{product.price}}</strong></h4>
+				{% endif %}
+
+			{% endif %}
+
+
+			</div>
+		</div>
+		{% endfor %}
+	</div>
+
+{% endblock content %}

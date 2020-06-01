@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+{% if user.is_superuser %}
+   <h2>Purchase History:</h2>
+
+{% else %}
+	<h2>Shopping History:</h2>
+{% endif %}
+	<table class="table">
+		<tr>
+			<td>ID</td>
+			<td>Name</td>
+				<td>Email</td>
+				<td>Date & Time</td>
+		    <td>Total (₹)</td>
+		</tr>
+		{% for object in object_list %}
+			{% if user.is_superuser or object.cust == user%}
+			<tr>
+					<td><a href="{% url 'orders:order_detail' object.id %}">{{ object.id}}</a></td>
+			    <td>{{ object.name }}</td>
+					<td>{{ object.email}}</td>
+					<td>{{ object.created }}</td>
+					<td>{{ object.get_total_cost }}</td>
+					{% endif %}
+				</tr>
+		{% endfor %}
+	</table>
+	<br>
+
+
+{% endblock %}

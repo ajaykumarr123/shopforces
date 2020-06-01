@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% block content %}
+
+{% if user.is_authenticated and user.is_superuser%}
+
+
+	<script>
+		 $(document).ready(function() {
+		   $('select').attr("class", "browser-default")
+		});
+	</script>
+	<form method="post" enctype="multipart/form-data">
+		{% csrf_token %}
+		{{form|crispy}}
+		<p><button class="btn btn-primary" type="submit">Submit</button><p>
+	</form>
+	<p><a class="btn btn-default" href="{% url 'product_manager_product_list' %}">Cancel</a></p>
+	{% else %}
+	<div class="container">
+		<p>You need admin access</p>
+		<button class="btn btn-outline-success my-2 my-sm-0"><a href="{% url 'store' %}">store</a></button>
+	</div>
+	{% endif %}
+
+
+{% endblock %}

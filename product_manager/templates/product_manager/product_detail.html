@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+{% if user.is_authenticated and user.is_superuser%}
+
+	<table class="table">
+	<div><img class="image" src="{{object.imageURL}}" width ="300" height ="200"></div>		
+	<tr>
+			<td>Name</td>
+			<td>{{ object.name }}</td>
+		</tr>
+		<tr>
+			<td>Description</td>
+			<td>{{ object.description }}</td>
+		</tr>
+		<tr>
+			<td>Quantity</td>
+			<td>{{object.stock}}</td>
+		<tr>
+			<td>Price (₹)</td>
+			<td>{{ object.price }}</td>
+		</tr>
+	</table>
+	<p>
+		<a class="btn btn-primary" href="{{object.get_update_url}}">Edit Product</a>
+	</p>
+	<p>
+		<a class="btn btn-primary" href="{{object.get_delete_url}}">Delete Product</a>
+	</p>
+	<p>
+		<a class="btn btn-outline-success my-2 my-sm-0" href="{% url 'product_manager_product_list' %}">Back</a>
+	</p>
+
+	{% else %}
+	<div class="container">
+		<p>You need admin access</p>
+<button class="btn btn-outline-success my-2 my-sm-0"><a href="{% url 'store' %}">store</a></button>	</div>
+	{% endif %}
+
+
+{% endblock %}

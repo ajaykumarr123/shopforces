@@ -1,0 +1,20 @@
+{%extends "base.html" %}
+{%block content%}
+    <h1>Leave History :</h1>
+    {% for ap in a1 %}
+    <article class="media content-section">
+    <img class = "rounded-circle article-img"src = "{{ ap.emp.employee.image.url }}">
+    <div class="media-body">
+      <div class="article-metadata">
+        <small class="text-muted">Employee : {{ ap.emp.employee.name }}</br></small>
+        <small class="text-muted">Date & Time : {{ ap.date_time }}</br></small>
+        <small class="text-muted">comments : {{ ap.adm_cmts }}</br></small>
+        <small class="text-muted">Status : {{ ap.status }}</br></small>
+        {% if ap.status != 'cancelled' %}
+            <a href="{% url 'leave:cancel-leave' ap.id %}">Cancel</a>
+        {% endif %}
+      </div>
+    </div>
+    </article>
+  {% endfor %}
+{%endblock content%}

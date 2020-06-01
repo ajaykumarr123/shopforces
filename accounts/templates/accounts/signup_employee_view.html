@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{%load crispy_forms_tags%}
+{% block content %}
+    <h1>Employee's Signup</h1>
+
+
+    <form method = "POST" enctype = "multipart/form-data">
+        {% csrf_token %}
+        <fieldset class="form =-group">
+          <legend class = "border-bottom mb-4">Profile Info</legend>
+          {{user_form|crispy}}
+          {{details_form|crispy}}
+        </fieldset>
+        <div class="form-group">
+            <input type="submit">
+    </form>
+{% endblock content %}
