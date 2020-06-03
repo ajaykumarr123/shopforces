@@ -3,7 +3,6 @@
 ```
 git clone https://github.com/ajaykumarr123/shop_management 
 ```
-</br>
 
 ##### Admin(Shop Owner) </br>
 ```
@@ -25,14 +24,12 @@ python -m pip install --user virtualenv
 ```
 
 2. Go to the directory where project is saved and create a new virtual environment new_v using the following command:
-
 ```bash
 python3 -m venv envv
 ```
 
 3. Activate the virtual environment
-
-```
+```bash
 source envv/bin/activate
 ```
 4.Install django and django-crispy-forms
