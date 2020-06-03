@@ -14,7 +14,7 @@ password: ajay
   ```
   python3 manage.py createsuperuser
   ```
-  ## Installation
+  ## :electric_plug: Installation
 
 1. Install python virtual environment
 
