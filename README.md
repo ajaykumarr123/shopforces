@@ -1,4 +1,6 @@
 # Shop Management System
+  A Web App developed in Django to manage the entire shop efficiently by providing functionalities such as-
+Inventory Management, buy/sell items, Shopping History , Approve/reject leave request,update profile etc
 ##### Step1: Clone repo.
 ```
 git clone https://github.com/ajaykumarr123/shop_management 
