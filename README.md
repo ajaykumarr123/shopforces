@@ -29,23 +29,18 @@ source envv/bin/activate
 ```bash
 pip3 install Django==2.2 django-autofixture django-extensions django-phone-field
 pip3 install celery==4.4.2 django-crispy-forms image django-rest-framework
-```
-5. Execute the following command to run the server:
+  ```
+5.To create new admin(shop owner)</br>
+ ```bash
+ python3 manage.py createsuperuser
+  ``````
+6. Execute the following command to run the server:
 ```bash
 python3 manage.py runserver
 ```
-5. Open the following address in your browser
+7. Open the following address in your browser
 ```bash
 http://127.0.0.1:8000/
 ```
-##### Admin(Shop Owner) </br>
-```
-username: ajay
-password: ajay
-```
 
-* To create new admin(shop owner)</br>
-  ```
-  python3 manage.py createsuperuser
-  ```
 Now follow Instructions given inside [Guide.pdf](https://github.com/ajaykumarr123/shop_management/blob/master/Guide.pdf)
