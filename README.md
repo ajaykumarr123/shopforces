@@ -6,16 +6,6 @@ Inventory Management, buy/sell items, Shopping History , Approve/reject leave re
 git clone https://github.com/ajaykumarr123/shop_management 
 ```
 
-##### Admin(Shop Owner) </br>
-```
-username: ajay
-password: ajay
-```
-
-* To create new admin(shop owner)</br>
-  ```
-  python3 manage.py createsuperuser
-  ```
   ## Installation
 
 1. Install python virtual environment
@@ -48,4 +38,14 @@ python3 manage.py runserver
 ```bash
 http://127.0.0.1:8000/
 ```
+##### Admin(Shop Owner) </br>
+```
+username: ajay
+password: ajay
+```
+
+* To create new admin(shop owner)</br>
+  ```
+  python3 manage.py createsuperuser
+  ```
 Now follow Instructions given inside [Guide.pdf](https://github.com/ajaykumarr123/shop_management/blob/master/Guide.pdf)
