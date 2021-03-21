@@ -19,8 +19,9 @@ sudo apt-get install python3-venv
 ```bash
 mkdir djangoenv
 python3 -m venv djangoenv
-source envv/bin/activate
+source djangoenv/bin/activate
 ```
+
 3.Install django and django-crispy-forms
 ```bash
 pip3 install Django==2.2 django-autofixture django-extensions django-phone-field
