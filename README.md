@@ -12,33 +12,29 @@ git clone https://github.com/ajaykumarr123/shop_management
 
 
 ```bash
-python -m pip install --user virtualenv
+sudo apt-get install python3-venv  
 ```
 
-2. Go to the directory where project is saved and create a new virtual environment new_v using the following command:
+2. Create a new virtual environment and activate it.
 ```bash
-python3 -m venv envv
-```
-
-3. Activate the virtual environment
-```bash
+mkdir djangoenv
+python3 -m venv djangoenv
 source envv/bin/activate
 ```
-4.Install django and django-crispy-forms
-
+3.Install django and django-crispy-forms
 ```bash
 pip3 install Django==2.2 django-autofixture django-extensions django-phone-field
 pip3 install celery==4.4.2 django-crispy-forms image django-rest-framework
   ```
-5.To create new admin(shop owner)</br>
+4.To create new admin(shop owner)</br>
  ```bash
  python3 manage.py createsuperuser
   ``````
-6. Execute the following command to run the server:
+5. Execute the following command to run the server:
 ```bash
 python3 manage.py runserver
 ```
-7. Open the following address in your browser
+6. Open the following address in your browser
 ```bash
 http://127.0.0.1:8000/
 ```
