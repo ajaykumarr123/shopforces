@@ -92,7 +92,7 @@ import dj_database_url
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': '<database_name>',
+        'NAME': 'abc',
         'USER': '<user_name>',
         'PASSWORD': '<password>',
         'HOST': 'localhost',
