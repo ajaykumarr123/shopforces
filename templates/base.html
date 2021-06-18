@@ -119,20 +119,12 @@
 									</button>
 							</a>
 					{% else %}
-						{% if not user.is_superuser and user.profile.type == 'D' %}
-								 <a href="{% url 'cart:cart_detail'%}">
-										<img  id="cart-icon" src="{% static 'images/cart.png' %}">
-									</a>
-									<p id="cart-total">{{cart|length }}</p>
-						{% endif %}
-						{% if not user.is_superuser and user.profile.type == 'P' %}
-								<a class="nav-item nav-link" href="{% url 'wish' %} " style="color: #ffffff">Wishlist</a>
+					<div class="navbar-nav">
 
-						{% endif %}
-						
-						<div class="navbar-nav">
+							{% if not user.is_superuser and user.profile.type == 'P' %}
+											<a class="nav-item nav-link" href="{% url 'wish' %}">Wishlist</a>
 
-							
+							{% endif %}
 
 							{% if user.is_superuser %}
 											<a class="nav-item nav-link" href="#" style="color: #ffffff">{{ user.username }}</a>
@@ -140,16 +132,28 @@
 													<button class="btn btn-outline-success my-2 my-sm-0" type="">Logout</button>
 											</a>
 							{% else %}
-							<a class="nav-item nav-link" href="{% url 'accounts:profile' %}" style="color: #51da2f">{{ user.username }}</a>
-											<a href="{% url 'accounts:logout_user' %}">
-													<button class="btn btn-outline-success my-2 my-sm-0" type="">Logout</button>
-											</a>
+							<li class="nav-item dropdown">
+							 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" style="color: #56e13b"role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								 {{ user.username }}
+							 </a>
+							 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+								 <a class="dropdown-item" href="{% url 'accounts:profile' %}" >profile</a>
+								 <div class="dropdown-divider"></div>
+								 <a class="dropdown-item" href="{% url 'accounts:logout_user' %}">
+										<button class="btn btn-outline-success my-2 my-sm-0" type="">Logout</button></a>
+							 </div>
+						 </li>
 
 							{% endif %}
 
 						</div>
 
-						
+						{% if not user.is_superuser and user.profile.type == 'D' %}
+							 <a href="{% url 'cart:cart_detail'%}">
+									<img  id="cart-icon" src="{% static 'images/cart.png' %}">
+								</a>
+								<p id="cart-total">{{cart|length }}</p>
+						{% endif %}
 
 					{% endif %}
 
