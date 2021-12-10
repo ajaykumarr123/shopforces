@@ -1,4 +1,6 @@
 # Shop Management System
+[shopforces.herokuapp.com](http://shopforces.herokuapp.com/)
+
   A Web App developed in Django to manage the entire shop efficiently by providing functionalities such as-
 Inventory Management, buy/sell items, Shopping History , Approve/reject leave request,update profile etc
 ##### Step1: Clone repo.
